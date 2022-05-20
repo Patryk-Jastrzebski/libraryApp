@@ -1,19 +1,20 @@
 //
-//  LoginView.swift
+//  RegisterView.swift
 //  libraryApp
 //
-//  Created by Patryk Jastrzębski on 19/05/2022.
+//  Created by Patryk Jastrzębski on 20/05/2022.
 //
 
 import SwiftUI
 
-struct LoginView: View {
+struct RegisterView: View {
     
     @StateObject var loginModel: LoginViewModel = LoginViewModel()
+    @State var retypePassword: String = ""
     
     var body: some View {
         VStack {
-            Text("Hej, \nzaloguj się")
+            Text("Dzień dobry, \nzarejestruj się teraz.")
                 .frame(maxWidth: .infinity ,alignment: .leading)
                 .font(.largeTitle.bold())
             
@@ -37,16 +38,26 @@ struct LoginView: View {
                 }.textInputAutocapitalization(.never)
                 .padding(.top, 15)
             
+            SecureField("Powtórz hasło", text: $retypePassword)
+                .padding()
+                .background {
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(
+                            retypePassword == "" ? Color.black.opacity(0.05) : Color(.gray).opacity(0.5)
+                        )
+                }.textInputAutocapitalization(.never)
+                .padding(.top, 15)
+            
             Button {
                 Task {
                     do {
-                        try await loginModel.loginUser()
+                        try await loginModel.registerUser()
                     } catch {
                         print(error.localizedDescription)
                     }
                 }
             } label: {
-                Text("Zaloguj")
+                Text("Zarejestruj")
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .padding()
@@ -56,17 +67,18 @@ struct LoginView: View {
                             .fill(Color.blue)
                     }
             }.padding(.top)
-                .disabled(loginModel.email == "" || loginModel.password == "")
+                .disabled(loginModel.email == "" || loginModel.password != retypePassword)
                 .opacity(loginModel.email == "" || loginModel.password == "" ? 0.5 : 1)
         }
         .padding(.horizontal, 25)
         .padding(.vertical)
         
     }
+    
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        RegisterView()
     }
 }

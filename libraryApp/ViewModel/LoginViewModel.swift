@@ -16,6 +16,7 @@ class LoginViewModel: ObservableObject {
     @AppStorage("log_status") var logStatus: Bool = false
     
     func loginUser() async throws {
+        
         let _ = try await Auth.auth().signIn(withEmail: email, password: password)
         logStatus = true
     }

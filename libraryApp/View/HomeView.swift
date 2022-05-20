@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @State var loginView: Bool = false
+    @State var registerView: Bool = false
     
     var body: some View {
         let width = UIScreen.main.bounds.width
@@ -56,7 +57,9 @@ struct HomeView: View {
                     .padding(.vertical, 20)
                 
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    registerView = true
+                }, label: {
                     Text("Nie posiadasz konta? Zarejestruj się.")
                         .font(.footnote.bold())
                 })
@@ -64,6 +67,7 @@ struct HomeView: View {
             .foregroundColor(.black)
             .multilineTextAlignment(.center)
             .sheet(isPresented: $loginView, content: {LoginView()})
+            .sheet(isPresented: $registerView, content: {RegisterView()})
         }
     }
 }
