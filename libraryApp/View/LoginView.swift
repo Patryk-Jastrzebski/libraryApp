@@ -17,12 +17,12 @@ struct LoginView: View {
                 .frame(maxWidth: .infinity ,alignment: .leading)
                 .font(.largeTitle.bold())
             
-            TextField("Login", text: $loginModel.login)
+            TextField("Login", text: $loginModel.email)
                 .padding()
                 .background {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(
-                            loginModel.login == "" ? Color.black.opacity(0.05) : Color("orange")
+                            loginModel.email == "" ? Color.black.opacity(0.05) : Color(.gray)
                         )
                 }.textInputAutocapitalization(.never)
                 .padding(.top, 20)
@@ -32,13 +32,19 @@ struct LoginView: View {
                 .background {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(
-                            loginModel.password == "" ? Color.black.opacity(0.05) : Color("orange")
+                            loginModel.password == "" ? Color.black.opacity(0.05) : Color(.gray)
                         )
                 }.textInputAutocapitalization(.never)
                 .padding(.top, 15)
             
             Button {
-                
+                Task {
+                    do {
+                        try await loginModel.loginUser()
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
             } label: {
                 Text("Zaloguj")
                     .fontWeight(.semibold)
@@ -50,8 +56,8 @@ struct LoginView: View {
                             .fill(Color.blue)
                     }
             }.padding(.top)
-                .disabled(loginModel.login == "" || loginModel.password == "")
-                .opacity(loginModel.login == "" || loginModel.password == "" ? 0.5 : 1)
+                .disabled(loginModel.email == "" || loginModel.password == "")
+                .opacity(loginModel.email == "" || loginModel.password == "" ? 0.5 : 1)
         }
         .padding(.horizontal, 25)
         .padding(.vertical)
