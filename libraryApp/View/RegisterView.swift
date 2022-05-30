@@ -23,7 +23,7 @@ struct RegisterView: View {
                 .background {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(
-                            loginModel.email == "" ? Color.black.opacity(0.05) : Color(.gray).opacity(0.5)
+                            loginModel.email == "" ? Color.black.opacity(0.05) : Color(.gray).opacity(0.2)
                         )
                 }.textInputAutocapitalization(.never)
                 .padding(.top, 20)
@@ -33,7 +33,7 @@ struct RegisterView: View {
                 .background {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(
-                            loginModel.password == "" ? Color.black.opacity(0.05) : Color(.gray).opacity(0.5)
+                            loginModel.password == "" ? Color.black.opacity(0.05) : Color(.gray).opacity(0.2)
                         )
                 }.textInputAutocapitalization(.never)
                 .padding(.top, 15)
@@ -43,7 +43,7 @@ struct RegisterView: View {
                 .background {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(
-                            retypePassword == "" ? Color.black.opacity(0.05) : Color(.gray).opacity(0.5)
+                            retypePassword == "" ? Color.black.opacity(0.05) : Color(.gray).opacity(0.2)
                         )
                 }.textInputAutocapitalization(.never)
                 .padding(.top, 15)
@@ -67,8 +67,8 @@ struct RegisterView: View {
                             .fill(Color.blue)
                     }
             }.padding(.top)
-                .disabled(loginModel.email == "" || loginModel.password != retypePassword)
-                .opacity(loginModel.email == "" || loginModel.password == "" ? 0.5 : 1)
+                .disabled(loginModel.email == "" || loginModel.password != retypePassword || loginModel.password == "")
+                .opacity(loginModel.email == "" || loginModel.password != retypePassword || loginModel.password == "" ? 0.5 : 1)
         }
         .padding(.horizontal, 25)
         .padding(.vertical)

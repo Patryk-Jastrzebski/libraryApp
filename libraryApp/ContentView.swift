@@ -9,20 +9,16 @@ import SwiftUI
 import Firebase
 struct ContentView: View {
     @AppStorage("log_status") var logStatus: Bool = false
+
     var body: some View {
         VStack {
+           // if Auth.auth().currentUser != nil{
             if logStatus {
-                Text("Zostałeś zalogowany poprawnie")
-                
-                Button("Wyloguj") {
-                    try? Auth.auth().signOut()
-                    logStatus = false
-                }
+                ListView()
             } else {
                 HomeView()
             }
         }
-        
     }
 }
 

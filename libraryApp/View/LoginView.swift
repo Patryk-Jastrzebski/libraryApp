@@ -22,7 +22,7 @@ struct LoginView: View {
                 .background {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(
-                            loginModel.email == "" ? Color.black.opacity(0.05) : Color(.gray).opacity(0.5)
+                            loginModel.email == "" ? Color.black.opacity(0.05) : Color(.gray).opacity(0.2)
                         )
                 }.textInputAutocapitalization(.never)
                 .padding(.top, 20)
@@ -32,7 +32,7 @@ struct LoginView: View {
                 .background {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(
-                            loginModel.password == "" ? Color.black.opacity(0.05) : Color(.gray).opacity(0.5)
+                            loginModel.password == "" ? Color.black.opacity(0.05) : Color(.gray).opacity(0.2)
                         )
                 }.textInputAutocapitalization(.never)
                 .padding(.top, 15)
@@ -61,6 +61,7 @@ struct LoginView: View {
         }
         .padding(.horizontal, 25)
         .padding(.vertical)
+        
         
     }
 }

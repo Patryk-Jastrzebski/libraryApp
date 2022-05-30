@@ -14,7 +14,9 @@ struct libraryAppApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //let viewModel = LoginViewModel()
+            ContentView().environmentObject(ListViewModel())
+                .environmentObject(LoginViewModel())
         }
     }
 }

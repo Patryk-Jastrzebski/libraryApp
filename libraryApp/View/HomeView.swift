@@ -14,6 +14,7 @@ struct HomeView: View {
     
     var body: some View {
         let width = UIScreen.main.bounds.width
+        NavigationView {
         ZStack {
             backgroundStyle()
             VStack {
@@ -38,10 +39,7 @@ struct HomeView: View {
                 }
                 Spacer()
                     .frame(height: 20)
-                
-                Button(action: {
-                    loginView = true
-                }, label: {
+                NavigationLink(destination: LoginView()) {
                     Text("Zaloguj")
                         .font(.title3.bold())
                         .padding(.vertical, 15)
@@ -52,24 +50,22 @@ struct HomeView: View {
                                 .cornerRadius(10)
                                 .shadow(radius: 10)
                         )
-                })
-                    .padding(.horizontal, 50)
-                    .padding(.vertical, 20)
+                }
+                .padding(.horizontal, 50)
+                .padding(.vertical, 20)
                 
-                
-                Button(action: {
-                    registerView = true
-                }, label: {
+                NavigationLink(destination: RegisterView()) {
                     Text("Nie posiadasz konta? Zarejestruj się.")
                         .font(.footnote.bold())
-                })
+                }
+                .padding(.horizontal, 50)
+                .padding(.vertical, 20)
+
             }
             .foregroundColor(.black)
             .multilineTextAlignment(.center)
-            .sheet(isPresented: $loginView, content: {LoginView()})
-            .sheet(isPresented: $registerView, content: {RegisterView()})
+        }}.navigationBarHidden(true)
         }
-    }
 }
 
 struct HomeView_Previews: PreviewProvider {

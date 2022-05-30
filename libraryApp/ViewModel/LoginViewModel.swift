@@ -16,12 +16,22 @@ class LoginViewModel: ObservableObject {
     @AppStorage("log_status") var logStatus: Bool = false
     
     func loginUser() async throws {
-        
         let _ = try await Auth.auth().signIn(withEmail: email, password: password)
-        logStatus = true
+        DispatchQueue.main.async {
+            self.logStatus = true
+        }
     }
     
     func registerUser() async throws {
         let _ = try await Auth.auth().createUser(withEmail: email, password: password)
+        do {
+            try await loginUser()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func fetchCurrentUser() async throws -> String? {
+        return Auth.auth().currentUser?.uid
     }
 }

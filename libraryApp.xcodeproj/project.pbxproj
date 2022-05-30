@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E8583DE2844B53A0034E59A /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8583DD2844B53A0034E59A /* ViewModifiers.swift */; };
+		5E8583E02844DF6D0034E59A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8583DF2844DF6D0034E59A /* SettingsView.swift */; };
 		5EA9194928341DAF007AAAB0 /* libraryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9194828341DAF007AAAB0 /* libraryAppApp.swift */; };
 		5EA9194B28341DAF007AAAB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9194A28341DAF007AAAB0 /* ContentView.swift */; };
 		5EA9194D28341DB1007AAAB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA9194C28341DB1007AAAB0 /* Assets.xcassets */; };
@@ -21,6 +23,13 @@
 		5EA9197E2836F389007AAAB0 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5EA9197D2836F389007AAAB0 /* FirebaseDatabase */; };
 		5EA919802836F389007AAAB0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5EA9197F2836F389007AAAB0 /* FirebaseFirestore */; };
 		5EA919822836F389007AAAB0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5EA919812836F389007AAAB0 /* FirebaseFirestoreSwift */; };
+		5EB4F08D284257D9000934EF /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5EB4F08C284257D9000934EF /* FirebaseDatabaseSwift */; };
+		5EB4F09028425B53000934EF /* GameRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F08F28425B53000934EF /* GameRowView.swift */; };
+		5EB4F0922843A109000934EF /* AddRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F0912843A109000934EF /* AddRowView.swift */; };
+		5ECB44E828401BA5003D475F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB44E728401BA5003D475F /* Game.swift */; };
+		5ECB44EA28401D3A003D475F /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB44E928401D3A003D475F /* ListView.swift */; };
+		5ECB44EF28410CAE003D475F /* GameEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB44EE28410CAE003D475F /* GameEditView.swift */; };
+		5ECB44F328425019003D475F /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB44F228425019003D475F /* ListViewModel.swift */; };
 		5EE53CCD2837A9C20093AC35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE53CCC2837A9C20093AC35 /* GoogleService-Info.plist */; };
 		5EE53CCF2837B4F50093AC35 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE53CCE2837B4F50093AC35 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E8583DD2844B53A0034E59A /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		5E8583DF2844DF6D0034E59A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5EA9194528341DAF007AAAB0 /* libraryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = libraryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA9194828341DAF007AAAB0 /* libraryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryAppApp.swift; sourceTree = "<group>"; };
 		5EA9194A28341DAF007AAAB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +67,12 @@
 		5EA91973283429F8007AAAB0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5EA919752836BD69007AAAB0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5EA919782836ED33007AAAB0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		5EB4F08F28425B53000934EF /* GameRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRowView.swift; sourceTree = "<group>"; };
+		5EB4F0912843A109000934EF /* AddRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRowView.swift; sourceTree = "<group>"; };
+		5ECB44E728401BA5003D475F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5ECB44E928401D3A003D475F /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		5ECB44EE28410CAE003D475F /* GameEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEditView.swift; sourceTree = "<group>"; };
+		5ECB44F228425019003D475F /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		5EE53CCC2837A9C20093AC35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5EE53CCE2837B4F50093AC35 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB4F08D284257D9000934EF /* FirebaseDatabaseSwift in Frameworks */,
 				5EA9197E2836F389007AAAB0 /* FirebaseDatabase in Frameworks */,
 				5EA9197C2836F389007AAAB0 /* FirebaseAuth in Frameworks */,
 				5EA919802836F389007AAAB0 /* FirebaseFirestore in Frameworks */,
@@ -96,6 +114,7 @@
 				5EA9195828341DB1007AAAB0 /* libraryAppTests */,
 				5EA9196228341DB1007AAAB0 /* libraryAppUITests */,
 				5EA9194628341DAF007AAAB0 /* Products */,
+				5EB4F08B284257D9000934EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,12 +132,14 @@
 			isa = PBXGroup;
 			children = (
 				5EE53CCC2837A9C20093AC35 /* GoogleService-Info.plist */,
+				5ECB44E428401B3C003D475F /* Model */,
 				5EA919772836ED1B007AAAB0 /* ViewModel */,
 				5EA91972283429E0007AAAB0 /* View */,
 				5EA9194828341DAF007AAAB0 /* libraryAppApp.swift */,
 				5EA9194A28341DAF007AAAB0 /* ContentView.swift */,
 				5EA9194C28341DB1007AAAB0 /* Assets.xcassets */,
 				5EA9194E28341DB1007AAAB0 /* Preview Content */,
+				5E8583DD2844B53A0034E59A /* ViewModifiers.swift */,
 			);
 			path = libraryApp;
 			sourceTree = "<group>";
@@ -151,9 +172,14 @@
 		5EA91972283429E0007AAAB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5EB4F08E28425B42000934EF /* RowView */,
 				5EA91973283429F8007AAAB0 /* HomeView.swift */,
 				5EA919752836BD69007AAAB0 /* LoginView.swift */,
 				5EE53CCE2837B4F50093AC35 /* RegisterView.swift */,
+				5ECB44E928401D3A003D475F /* ListView.swift */,
+				5ECB44EE28410CAE003D475F /* GameEditView.swift */,
+				5EB4F0912843A109000934EF /* AddRowView.swift */,
+				5E8583DF2844DF6D0034E59A /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,9 +187,33 @@
 		5EA919772836ED1B007AAAB0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5ECB44F228425019003D475F /* ListViewModel.swift */,
 				5EA919782836ED33007AAAB0 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5EB4F08B284257D9000934EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EB4F08E28425B42000934EF /* RowView */ = {
+			isa = PBXGroup;
+			children = (
+				5EB4F08F28425B53000934EF /* GameRowView.swift */,
+			);
+			path = RowView;
+			sourceTree = "<group>";
+		};
+		5ECB44E428401B3C003D475F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5ECB44E728401BA5003D475F /* Game.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +237,7 @@
 				5EA9197D2836F389007AAAB0 /* FirebaseDatabase */,
 				5EA9197F2836F389007AAAB0 /* FirebaseFirestore */,
 				5EA919812836F389007AAAB0 /* FirebaseFirestoreSwift */,
+				5EB4F08C284257D9000934EF /* FirebaseDatabaseSwift */,
 			);
 			productName = libraryApp;
 			productReference = 5EA9194528341DAF007AAAB0 /* libraryApp.app */;
@@ -306,12 +357,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E8583DE2844B53A0034E59A /* ViewModifiers.swift in Sources */,
 				5EA91974283429F8007AAAB0 /* HomeView.swift in Sources */,
 				5EA9194B28341DAF007AAAB0 /* ContentView.swift in Sources */,
+				5ECB44F328425019003D475F /* ListViewModel.swift in Sources */,
 				5EA919762836BD69007AAAB0 /* LoginView.swift in Sources */,
+				5ECB44EF28410CAE003D475F /* GameEditView.swift in Sources */,
+				5EB4F09028425B53000934EF /* GameRowView.swift in Sources */,
+				5E8583E02844DF6D0034E59A /* SettingsView.swift in Sources */,
 				5EE53CCF2837B4F50093AC35 /* RegisterView.swift in Sources */,
 				5EA919792836ED33007AAAB0 /* LoginViewModel.swift in Sources */,
 				5EA9194928341DAF007AAAB0 /* libraryAppApp.swift in Sources */,
+				5EB4F0922843A109000934EF /* AddRowView.swift in Sources */,
+				5ECB44E828401BA5003D475F /* Game.swift in Sources */,
+				5ECB44EA28401D3A003D475F /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +729,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5EA9197A2836F389007AAAB0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		5EB4F08C284257D9000934EF /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EA9197A2836F389007AAAB0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
